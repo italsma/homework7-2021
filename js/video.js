@@ -48,18 +48,34 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 // Mute / Unmute Button //
-// document.querySelector("#mute").addEventListener("click", function() {
-// 	console.log("Muted");
-// 	video.muted = true;
-// 	if (video.muted == true) {
-// 		document.querySelector("#mute").innerHTML = "Unmute";
-// 		document.querySelector("#volume").innerHTML = "0%"
-// 	}
-// 	if (video.muted = false) {
-// 		document.querySelector("#mute").innerHTML = "Mute";
-// 		document.querySelector("#volume").innerHTML = "100%"
-// 	}
-// });
+document.querySelector("#mute").addEventListener("click", function() {
+	// video.muted = true;
+	// if (video.muted == true) {
+	// 	document.querySelector("#mute").innerHTML = "Unmute";
+	// 	// document.querySelector("#volume").innerHTML = "0%"
+	// }
+	// else {
+	// 	console.log("Unmuted");
+	// 	video.muted = false;
+	// 	document.querySelector("#mute").innerHTML = "Mute";
+	// }
+
+	if(video.muted == true){
+		console.log("Unmuted");
+		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute";
+	} 
+	else if (video.muted == false){
+		console.log("Muted");
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute";
+		
+	}
+	// else {
+	// 	document.querySelector("#mute").innerHTML = "Mute";
+	// // 	// document.querySelector("#volume").innerHTML = "100%"
+	// }
+});
 
 
 // Volume slider - only one where we use "this"//
